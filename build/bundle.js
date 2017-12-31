@@ -80,7 +80,7 @@ var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _renderer = __webpack_require__(5);
+var _renderer = __webpack_require__(3);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
@@ -106,12 +106,6 @@ module.exports = require("express");
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-dom/server");
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -125,69 +119,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Home = function Home() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'div',
-      null,
-      'Farid!'
-    ),
-    _react2.default.createElement(
-      'button',
-      {
-        onClick: function onClick() {
-          console.log('Button Clicked');
-        }
-      },
-      'Press Me!!'
-    )
-  );
-};
-
-exports.default = Home;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _server = __webpack_require__(3);
-
-var _Home = __webpack_require__(4);
-
-var _Home2 = _interopRequireDefault(_Home);
+var _server = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function () {
-  var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
-
-  return _react2.default.createElement(
-    'html',
-    null,
-    _react2.default.createElement('head', null),
-    _react2.default.createElement(
-      'body',
-      null,
-      _react2.default.createElement('div', { id: 'root' }),
-      _react2.default.createElement('script', { src: 'bundle.js' })
-    )
-  );
+  return '\n  <html>\n    <head></head>\n    <body>\n      <div id="root"></div>\n      <script src="bundle.js"></script>\n    </body>\n  </html>\n  ';
 };
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom/server");
 
 /***/ })
 /******/ ]);
