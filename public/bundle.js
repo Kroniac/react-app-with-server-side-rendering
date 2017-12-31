@@ -2390,16 +2390,14 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouterDom = __webpack_require__(27);
 
-var _reactRouterDom2 = _interopRequireDefault(_reactRouterDom);
-
 var _Routes = __webpack_require__(79);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.hydrate(_react2.default.createElement(
-  _reactRouterDom2.default,
+_reactDom2.default.render(_react2.default.createElement(
+  _reactRouterDom.BrowserRouter,
   null,
   _react2.default.createElement(_Routes2.default, null)
 ), document.querySelector('#root'));
