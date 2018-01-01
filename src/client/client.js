@@ -5,6 +5,7 @@ import Routes from './components/Routes';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import reducers from './reducer/index';
 
 const store = createStore(reducers, {}, applyMiddleware(thunk));
 
